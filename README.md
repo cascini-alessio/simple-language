@@ -1,48 +1,35 @@
-# A simple programming language interpreter written in C++
+# A Simple Programming Language Interpreter
 
-This repository contains a simple interpreter for a minimal programming language. The language currently supports only a basic `print` statement, which can be used as a starting point for further development and expansion.
+This repository contains a basic interpreter for a minimal programming language, designed to be simple yet scalable. The language currently supports a single instruction: printing strings using the `print` command.
 
-## Project Status
+## Project Overview
 
-This project is currently paused in favor of being ported to **Rust** for better performance, memory safety, and scalability. While the project is not being actively maintained in its current state, users are encouraged to use this code as a base to experiment with and extend the language.
+This project serves as a foundation for developing a programming language, offering a straightforward implementation of a parser and an interpreter. Its modular architecture makes it an excellent starting point for those interested in learning about language design or building their own language.  
+
+The current implementation is in **C++**, but the project is transitioning to **Rust** to take advantage of its modern features, memory safety, and concise codebase. The C++ version remains available as an educational example.
 
 ## Features
 
-- A basic **print** statement that can print string literals to the console.
-- A simple lexer and parser to tokenize and interpret the input.
-- An initial framework for expanding the language by adding more instructions and features.
+- **Parser:** Analyzes source code and generates an Abstract Syntax Tree (AST) to represent instructions.
+- **Interpreter:** Executes the instructions in the AST, enabling immediate testing of source code.
+- **Extensibility:** The design uses well-known patterns like the Visitor Pattern, making it easy to add new features or transformations (e.g., optimizations or semantic analysis).
+- **Modularity:** The code is divided into multiple files for clarity and scalability.
 
-## How to Use
+## Why Use This Project?
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/cascini-alessio/simple-language.git
-   ```
+- **Educational Value:** Ideal for understanding the basics of programming language design, including lexing, parsing, and interpreting.
+- **Customizability:** Provides a clear and simple platform to build your own language by adding features such as variables, operators, conditions, and loops.
+- **Transition to Rust:** The ongoing port to **Rust** will allow exploration of advanced features while maintaining performance and memory safety.
 
-2. Compile the code:
-   ```bash
-   g++ -o interpreter main.cpp
-   ```
+## Project Status
 
-3. Run the interpreter:
-   ```bash
-   ./interpreter
-   ```
-
-4. The language currently supports a single instruction:
-   ```plaintext
-   print("Hello, World!");
-   ```
-
-## How to Contribute
-
-Feel free to fork the repository and build upon it. You can add new instructions, improve the parser, or extend the features of the language as needed. Contributions are welcome, and please feel free to submit pull requests.
+The C++ version is no longer actively developed, as the project is being ported to **Rust**. However, the current implementation is a solid foundation for anyone looking to explore language design or extend the existing functionality.
 
 ## Future Plans
 
-- The project will be ported to **Rust** for better performance and memory management.
-- Additional features, such as loops, conditionals, and variables, will be implemented.
-- The project will become a fully-fledged language, with a more sophisticated interpreter and error handling.
+- **Rust Port:** The interpreter will be rewritten in **Rust** for better performance, memory management, and scalability.
+- **Feature Expansion:** Future iterations will include support for loops, conditionals, variables, and error handling.
+- **Sophisticated Interpreter:** The goal is to create a fully-fledged language with advanced features and robust functionality.
 
 ## License
 
